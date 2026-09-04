@@ -1,0 +1,129 @@
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.settings-form__header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+  letter-spacing: -0.03em;
+}
+
+.settings-form__header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.settings-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.settings-form__field label {
+  font-weight: 600;
+}
+
+.settings-form__field input[type="text"],
+.settings-form__field input[type="email"] {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 0.65rem;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.settings-form__field input:focus-visible,
+.settings-form__option:focus-within,
+.settings-form__submit:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.settings-form__field input[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+.settings-form__error {
+  margin: 0;
+  color: var(--danger);
+  font-size: 0.92rem;
+}
+
+.settings-form__success {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border-radius: 0.65rem;
+  background: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+}
+
+.settings-form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.settings-form__fieldset legend {
+  font-weight: 600;
+  padding: 0;
+}
+
+.settings-form__hint {
+  margin: 0.35rem 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.settings-form__options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.settings-form__option {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.settings-form__option input {
+  margin-top: 0.2rem;
+}
+
+.settings-form__option-label {
+  display: block;
+  font-weight: 600;
+}
+
+.settings-form__option-copy {
+  display: block;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.settings-form__submit {
+  align-self: flex-start;
+  border: 0;
+  border-radius: 0.7rem;
+  padding: 0.75rem 1.15rem;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.settings-form__submit:hover {
+  background: var(--accent-hover);
+}

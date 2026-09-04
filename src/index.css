@@ -1,0 +1,44 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f1ea;
+  --surface: #fffdf8;
+  --text: #1c1915;
+  --muted: #5c564c;
+  --border: #d9d1c4;
+  --accent: #24573a;
+  --accent-hover: #1c4530;
+  --danger: #9b1c1c;
+  --success-bg: #e8f5ec;
+  --success-text: #14532d;
+  --success-border: #bbd8c4;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+button,
+input,
+label {
+  font: inherit;
+}

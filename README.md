@@ -20,7 +20,18 @@ git clone https://github.com/k2004gharat-collab/Capstone-project.git
 cd Capstone-project
 ```
 
-Install and run steps will be documented here once the application code is in the repo.
+Install dependencies and start the app:
+
+```bash
+npm install
+npm run dev
+```
+
+The settings form is the main screen. Run tests with:
+
+```bash
+npm test
+```
 
 ## License
 

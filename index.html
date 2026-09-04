@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings · Capstone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#settings-form">Skip to settings</a>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Capstone</span>
+      </div>
+      <p class="topbar-note">Project preferences</p>
+    </header>
+
+    <main class="layout">
+      <div class="intro">
+        <h1>Settings</h1>
+        <p>
+          Update how this project identifies you, looks, and talks to you.
+          Changes stay on this device until you save.
+        </p>
+      </div>
+
+      <form id="settings-form" novalidate>
+        <p id="form-status" class="status" role="status" aria-live="polite" hidden></p>
+
+        <section class="card" aria-labelledby="account-heading">
+          <h2 id="account-heading">Account</h2>
+          <p class="section-copy">Shown on your profile and in project activity.</p>
+
+          <div class="field">
+            <label for="display-name">Display name</label>
+            <input
+              id="display-name"
+              name="displayName"
+              type="text"
+              autocomplete="name"
+              maxlength="60"
+              required
+            />
+            <p class="hint" id="display-name-hint">2–60 characters.</p>
+            <p class="error" id="display-name-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+            <p class="error" id="email-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="timezone">Time zone</label>
+            <select id="timezone" name="timezone"></select>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="appearance-heading">
+          <h2 id="appearance-heading">Appearance</h2>
+          <p class="section-copy">Choose a theme for this workspace.</p>
+
+          <fieldset class="theme-fieldset">
+            <legend class="sr-only">Theme</legend>
+            <div class="theme-grid">
+              <label class="choice">
+                <input type="radio" name="theme" value="light" />
+                <span>
+                  <strong>Light</strong>
+                  <span>Bright canvas, dark text</span>
+                </span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="theme" value="dark" />
+                <span>
+                  <strong>Dark</strong>
+                  <span>Low glare for long sessions</span>
+                </span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="theme" value="system" />
+                <span>
+                  <strong>System</strong>
+                  <span>Follow the device setting</span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="toggle">
+            <input type="checkbox" id="compact-mode" name="compactMode" />
+            <span class="toggle-ui" aria-hidden="true"></span>
+            <span>
+              <strong>Compact layout</strong>
+              <span>Tighter spacing on lists and cards</span>
+            </span>
+          </label>
+        </section>
+
+        <section class="card" aria-labelledby="notifications-heading">
+          <h2 id="notifications-heading">Notifications</h2>
+          <p class="section-copy">Pick which messages you want to receive.</p>
+
+          <label class="toggle">
+            <input type="checkbox" id="notify-email" name="notifyEmail" />
+            <span class="toggle-ui" aria-hidden="true"></span>
+            <span>
+              <strong>Email alerts</strong>
+              <span>Immediate notices for comments and mentions</span>
+            </span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="notify-product" name="notifyProduct" />
+            <span class="toggle-ui" aria-hidden="true"></span>
+            <span>
+              <strong>Product updates</strong>
+              <span>New features and occasional tips</span>
+            </span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="notify-digest" name="notifyDigest" />
+            <span class="toggle-ui" aria-hidden="true"></span>
+            <span>
+              <strong>Weekly digest</strong>
+              <span>A Sunday summary of project activity</span>
+            </span>
+          </label>
+        </section>
+
+        <section class="card" aria-labelledby="privacy-heading">
+          <h2 id="privacy-heading">Privacy</h2>
+          <p class="section-copy">Control what others and analytics can see.</p>
+
+          <label class="toggle">
+            <input type="checkbox" id="public-profile" name="publicProfile" />
+            <span class="toggle-ui" aria-hidden="true"></span>
+            <span>
+              <strong>Public profile</strong>
+              <span>Let others find your display name on this project</span>
+            </span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="analytics" name="analytics" />
+            <span class="toggle-ui" aria-hidden="true"></span>
+            <span>
+              <strong>Usage analytics</strong>
+              <span>Share anonymous usage to improve the app</span>
+            </span>
+          </label>
+        </section>
+
+        <div class="actions">
+          <button type="submit">Save changes</button>
+          <button type="button" class="secondary" id="reset-btn">Reset to saved</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="settings.js"></script>
+  </body>
+</html>

@@ -1,11 +1,14 @@
 # Capstone Project
 
-This repository holds Kirti's capstone project. It currently contains project scaffolding (license and repo metadata). Application source code has not been added yet.
+This repository holds Kirti's capstone project. The first screen is a settings form for account, appearance, notifications, and privacy preferences.
 
 ## What's in this repository
 
 | File | Purpose |
 |------|---------|
+| `index.html` | Settings form markup |
+| `styles.css` | Layout and theme styles |
+| `settings.js` | Validation, theme preview, and local save |
 | `README.md` | Project overview (this file) |
 | `LICENSE` | MIT License |
 | `CLAUDE.md` | Notes for AI coding assistants |
@@ -20,7 +23,13 @@ git clone https://github.com/k2004gharat-collab/Capstone-project.git
 cd Capstone-project
 ```
 
-Install and run steps will be documented here once the application code is in the repo.
+Open the settings form by serving the project folder (needed so the page can save preferences in the browser):
+
+```bash
+python -m http.server 5173
+```
+
+Then visit `http://localhost:5173`. The form covers account, appearance, notifications, and privacy. Valid settings are stored in `localStorage` on this device.
 
 ## License
 

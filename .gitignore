@@ -1,20 +1,6 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-
-# Dependencies and build
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor and OS
-.vscode/*
-!.vscode/extensions.json
-.idea
+node_modules/
+.env
+.env.local
+dist/
+build/
 .DS_Store
-Thumbs.db
-
-# Tests and coverage
-coverage

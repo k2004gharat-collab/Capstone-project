@@ -1,43 +1,27 @@
-# Project Rules
+# Project Instructions
 
-## 1. React and TypeScript
+## Tech Stack
 
-- Use React with TypeScript for new UI components.
+- Node.js
+- JavaScript
+- Git
+- GitHub
 
-- Prefer functional components and keep components focused on one responsibility.
+## Coding Conventions
 
-- Use existing components and project patterns before creating new ones.
+- Use clear and meaningful variable names.
+- Keep functions small and focused.
+- Use modern JavaScript syntax.
+- Write readable and maintainable code.
+- Add comments only when they are useful.
 
-## 2. Forms and Validation
+## Git Conventions
 
-- Every form input must have a properly associated label.
+Use Conventional Commits.
 
-- Validate required fields and user input before allowing submission.
+Examples:
 
-- Display clear validation messages next to the relevant field.
-
-- Keep validation logic separate from UI components when practical.
-
-## 3. Accessibility
-
-- All interactive elements must be keyboard accessible.
-
-- Use semantic HTML elements where possible.
-
-- Form controls must have accessible labels and validation feedback.
-
-## 4. Testing
-
-- Add tests for important user-facing behavior, especially form validation and successful submission.
-
-- Run the relevant tests after making changes.
-
-- Fix test failures before considering a feature complete.
-
-## 5. Project Consistency
-
-- Follow the existing project's styling and component conventions.
-
-- Do not introduce unnecessary dependencies.
-
-- Do not create duplicate components when an existing component can be reused.
+- feat: add a new feature
+- fix: fix a bug
+- docs: update documentation
+- chore: update project configuration

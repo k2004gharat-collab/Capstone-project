@@ -1,6 +1,8 @@
+
 import { useEffect, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import SettingsForm from "./components/SettingsForm";
+import Chat from "./components/Chat";
 
 function Home() {
   return (
@@ -30,7 +32,7 @@ function Health() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-   fetch(import.meta.env.VITE_HEALTH_API_URL)
+    fetch(import.meta.env.VITE_HEALTH_API_URL)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch health-check data");
@@ -64,8 +66,8 @@ function Health() {
             <strong>Fetched ID:</strong> {data.id}
           </p>
           <p>
-  <strong>Fetched message:</strong> Health check data fetched successfully.
-</p>
+            <strong>Fetched message:</strong> Health check data fetched successfully.
+          </p>
         </div>
       )}
     </section>
@@ -102,6 +104,13 @@ export default function App() {
             >
               Health
             </Link>
+
+            <Link
+              to="/chat"
+              className="rounded-md px-3 py-2 text-sm font-medium hover:bg-slate-100"
+            >
+              AI Chat
+            </Link>
           </nav>
         </div>
       </header>
@@ -111,6 +120,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/health" element={<Health />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </main>
     </div>

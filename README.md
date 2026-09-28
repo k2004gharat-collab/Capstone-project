@@ -1,38 +1,50 @@
 # Capstone Project
 
-This repository holds Kirti's capstone project. It currently contains project scaffolding (license and repo metadata). Application source code has not been added yet.
+## Description
 
-## What's in this repository
+This project will be developed as part of my capstone project.
 
-| File | Purpose |
-|------|---------|
-| `README.md` | Project overview (this file) |
-| `LICENSE` | MIT License |
-| `CLAUDE.md` | Notes for AI coding assistants |
-| `.gitignore` | Git ignore rules |
+## Tech Stack
 
-## Getting started
+- Node.js
+- JavaScript
+- Git
+- GitHub
 
-Clone the repository:
+## Status
 
-```bash
-git clone https://github.com/k2004gharat-collab/Capstone-project.git
-cd Capstone-project
-```
+Project setup in progress.
 
-Install dependencies and start the app:
+## FE-07: Accessibility Analysis Tool
 
-```bash
-npm install
-npm run dev
-```
+### Tool name
 
-The settings form is the main screen. Run tests with:
+`analyzeAccessibility`
 
-```bash
-npm test
-```
+### Purpose
 
-## License
+The `analyzeAccessibility` tool analyzes a UI element against three basic accessibility checks and returns a structured accessibility score and recommendations.
 
-This project is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Kirti.
+### Input schema
+
+The tool accepts:
+
+- `element`: string — the UI element being analyzed.
+- `hasAccessibleName`: boolean — whether the element has a clear accessible name or label.
+- `keyboardAccessible`: boolean — whether the element can be operated using the keyboard.
+- `hasFocusStyle`: boolean — whether the element has a visible keyboard focus style.
+
+The input is validated using Zod.
+
+### Return shape
+
+```ts
+{
+  element: string;
+  score: number;
+  checks: {
+    label: string;
+    passed: boolean;
+    recommendation: string | null;
+  }[];
+}
